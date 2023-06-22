@@ -1,0 +1,25 @@
+<h4>Agregar personaje</h4>
+<form class="row"
+(ngSubmit)="emitCharacter()">
+  <!-- <input type="text" [value]="character.name" class="form-control mb-2" placeholder="Nombre"> -->
+  <!-- Para que funcione el twoway-databinding (caja de bananas porque asocia un
+    evento () y un atributo []) hay que importar la librería FormsModule
+  Como los modelos están dentro de un formulario (tag <form>)
+    se debe establecer el nombre del campo del que tomará el valor
+  -->
+  <input
+    type="text"
+    [(ngModel)]="character.name"
+    name="name"
+    class="form-control mb-2"
+    placeholder="Nombre">
+  <input
+    type="number"
+    [(ngModel)]="character.power"
+    name="power"
+    class="form-control mb-2" placeholder="Poder">
+  <!-- al ponerlo de tipo submit, aunque no hga nada se
+  llama al servidor -->
+  <button type="submit" class="btn btn-primary">Agregar</button>
+  <!-- <button type="submit" (click)="emitCharacter()" class="btn btn-primary">Agregar</button> -->
+</form>
