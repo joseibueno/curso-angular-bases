@@ -1,0 +1,18 @@
+<hr>
+
+<div class="row">
+  <div class="col">
+    <!-- al pasarle la lista de characteres como @Input a la lista que
+      renderiza esa lista, que esté representado
+      por el selector <app-dbz-list> entonces es accesible a ese componente
+    -->
+    <app-dbz-list [characterList]="characters"
+    (onDeleteId)="deleteCharacterById($event)"></app-dbz-list>
+
+  </div>
+  <div class="col">
+    <dbz-add-character
+      (onNewCharacter)="onNewCharacter($event)"
+     ></dbz-add-character>
+  </div>
+</div>
