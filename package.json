@@ -4,9 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",
-    "build": "ng build",
+    "build": "ng build --base-ref ./",
+    "build:href": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "new:folder": "mkdir temp"
   },
 
   "private": true,
